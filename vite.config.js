@@ -7,5 +7,5 @@ export default defineConfig({
     host: '0.0.0.0',
     port: 5173
   },
-  base: '/julia-rodrigues-advocacia/' // para GitHub Pages
+  base: '/julia-rodrigues-advocacia/'
 })
