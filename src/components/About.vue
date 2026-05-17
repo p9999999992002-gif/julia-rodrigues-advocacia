@@ -1,5 +1,3 @@
-<script setup></script>
-
 <template>
   <section id="about" class="about">
     <div class="container">
@@ -36,83 +34,5 @@
 </template>
 
 <style scoped>
-.about {
-  background: #0a0e1a;
-  color: white;
-  padding: 8rem 0;
-}
-
-.container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
-
-.section-header {
-  text-align: center;
-  margin-bottom: 5rem;
-}
-
-.badge {
-  color: #c8a96e;
-  font-size: 0.82rem;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-}
-
-.section-header h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2.6rem, 5vw, 3.6rem);
-  margin-top: 1rem;
-  font-weight: 500;
-}
-
-.content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 6rem;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.text p {
-  font-size: 1.18rem;
-  line-height: 1.85;
-  color: rgba(255,255,255,0.8);
-  margin-bottom: 1.8rem;
-}
-
-.credentials {
-  background: rgba(200,169,110,0.05);
-  border: 1px solid rgba(200,169,110,0.2);
-  padding: 3.2rem 2.8rem;
-}
-
-.oab-box span {
-  color: #c8a96e;
-  letter-spacing: 3px;
-  font-size: 1.1rem;
-}
-
-.oab-box strong {
-  font-size: 2.4rem;
-  color: #c8a96e;
-  margin-top: 6px;
-  display: block;
-}
-
-.specialty {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.55rem;
-  margin: 1.5rem 0;
-}
-
-.quote {
-  font-style: italic;
-  color: #c8a96e;
-  font-size: 1.1rem;
-  border-left: 3px solid #c8a96e;
-  padding-left: 1.2rem;
-}
-
-@media (max-width: 900px) {
-  .content { grid-template-columns: 1fr; gap: 4rem; }
-}
+.about{background:#0a0e1a;color:#fff;padding:8rem 0}.container{max-width:1280px;margin:0 auto;padding:0 1rem}.section-header{text-align:center;margin-bottom:5rem}.badge{color:#c8a96e;font-size:.82rem;letter-spacing:4px;text-transform:uppercase}.section-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.6rem,5vw,3.6rem);margin-top:1rem;font-weight:500}.content{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;max-width:1100px;margin:0 auto}.text p{font-size:1.05rem;line-height:1.85;color:rgba(255,255,255,.8);margin-bottom:1.4rem}.credentials{background:rgba(200,169,110,.05);border:1px solid rgba(200,169,110,.2);padding:2.4rem 2rem}.oab-box span{color:#c8a96e;letter-spacing:3px;font-size:.95rem}.oab-box strong{font-size:2.2rem;color:#c8a96e;margin-top:6px;display:block}.specialty{font-family:'Cormorant Garamond',serif;font-size:1.45rem;margin:1.5rem 0}.quote{font-style:italic;color:#c8a96e;font-size:1rem;border-left:3px solid #c8a96e;padding-left:1rem;line-height:1.7}@media (max-width:900px){.content{grid-template-columns:1fr;gap:2rem}.credentials{padding:2rem 1.5rem}.section-header{margin-bottom:3.5rem}}@media (max-width:768px){.about{padding:6rem 0}.text p{font-size:1rem;line-height:1.75}.specialty{font-size:1.3rem}.oab-box strong{font-size:2rem}}
 </style>
