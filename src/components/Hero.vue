@@ -1,4 +1,3 @@
-```vue
 <script setup>
 const stats = [
   { num: "8+", label: "Anos de experiência" },
@@ -10,8 +9,6 @@ const stats = [
 <template>
   <section id="home" class="hero">
     <div class="content">
-
-      <!-- TEXTO -->
       <div class="text-side">
         <span class="badge">DIREITO TRABALHISTA</span>
 
@@ -27,7 +24,6 @@ const stats = [
           transparência e foco em resultados reais.
         </p>
 
-        <!-- BOTÕES -->
         <div class="actions">
           <a href="#contact" class="main-cta">
             Agendar Consulta Gratuita
@@ -38,7 +34,6 @@ const stats = [
           </a>
         </div>
 
-        <!-- STATS -->
         <div class="stats">
           <div
             v-for="(stat, i) in stats"
@@ -51,7 +46,6 @@ const stats = [
         </div>
       </div>
 
-      <!-- IMAGEM -->
       <div class="image-side">
         <div class="image-wrapper">
           <img src="/julia.jpg" alt="Julia Rodrigues" />
@@ -63,7 +57,6 @@ const stats = [
           </div>
         </div>
       </div>
-
     </div>
   </section>
 </template>
@@ -80,24 +73,16 @@ const stats = [
   overflow: hidden;
 }
 
-/* EFEITO DE FUNDO */
-
 .hero::before {
   content: '';
   position: absolute;
   width: 700px;
   height: 700px;
-  background: radial-gradient(
-    circle,
-    rgba(200,169,110,0.08),
-    transparent 70%
-  );
+  background: radial-gradient(circle, rgba(200,169,110,0.08), transparent 70%);
   top: -220px;
   right: -180px;
   pointer-events: none;
 }
-
-/* LAYOUT */
 
 .content {
   max-width: 1280px;
@@ -111,8 +96,6 @@ const stats = [
   position: relative;
   z-index: 2;
 }
-
-/* TEXTO */
 
 .badge {
   color: #c8a96e;
@@ -143,8 +126,6 @@ h1 em {
   line-height: 1.9;
   margin-bottom: 2.5rem;
 }
-
-/* BOTÕES */
 
 .actions {
   display: flex;
@@ -185,8 +166,6 @@ h1 em {
   opacity: 0.85;
 }
 
-/* STATS */
-
 .stats {
   margin-top: 4rem;
   display: flex;
@@ -211,8 +190,6 @@ h1 em {
   font-size: 1rem;
 }
 
-/* IMAGEM */
-
 .image-wrapper {
   position: relative;
   border: 1px solid rgba(200, 169, 110, 0.16);
@@ -224,42 +201,20 @@ h1 em {
 
 img {
   width: 100%;
-  height: 620px;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
   display: block;
 }
-
-/* CARD SOBRE A IMAGEM */
 
 .info-overlay {
   position: absolute;
   left: 30px;
   right: 30px;
   bottom: 30px;
-
-  /* Troque o fundo com blur por um fundo simples */
-  background: rgba(6, 8, 16, 0.85); /* antes: rgba(6, 8, 16, 0.92) + blur */
-  /* REMOVER: backdrop-filter: blur(12px); */
-
-  padding: 1.3rem 1.6rem;
+  background: rgba(6, 8, 16, 0.88);
+  padding: 1.2rem 1.5rem;
   border: 1px solid rgba(200,169,110,0.25);
 }
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .info-overlay {
-    left: 12px;
-    bottom: 12px;
-    padding: 0.8rem 1rem;
-    max-width: 210px;
-
-    /* Simplifique ainda mais no mobile */
-    background: rgba(6, 8, 16, 0.9);
-    backdrop-filter: none; /* garante que não aplique blur */
-    box-shadow: none;      /* remove sombra pesada */
-  }
-}
-
 
 .name {
   color: #c8a96e;
@@ -280,10 +235,7 @@ img {
   font-size: 0.92rem;
 }
 
-/* RESPONSIVO */
-
 @media (max-width: 980px) {
-
   .content {
     grid-template-columns: 1fr;
     gap: 4rem;
@@ -305,11 +257,9 @@ img {
   .stats {
     justify-content: center;
   }
-
 }
 
 @media (max-width: 768px) {
-
   .hero {
     padding-top: 130px;
     padding-bottom: 5rem;
@@ -317,7 +267,7 @@ img {
 
   .content {
     gap: 3rem;
-    padding: 0 1.2rem;
+    padding: 0 1rem;
   }
 
   h1 {
@@ -345,15 +295,15 @@ img {
   }
 
   img {
-    height: 420px;
+    aspect-ratio: 4 / 5;
   }
 
-    .info-overlay {
+  .info-overlay {
     left: 12px;
+    right: 12px;
     bottom: 12px;
     padding: 0.8rem 1rem;
-    max-width: 210px;
-    }
+  }
 
   .title {
     font-size: 1.2rem;
@@ -366,7 +316,5 @@ img {
   .stat-item strong {
     font-size: 1.8rem;
   }
-
 }
 </style>
-```

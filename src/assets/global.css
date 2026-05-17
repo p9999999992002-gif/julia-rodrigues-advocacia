@@ -57,63 +57,9 @@ img{
 }
 
 @media (max-width: 768px) {
-
-  .hero{
-    padding-top: 130px;
-    padding-bottom: 5rem;
+  .container{
+    padding:0 1rem;
   }
-
-  .content{
-    gap: 3rem;
-  }
-
-  h1{
-    font-size: 3rem;
-    line-height: 1.05;
-  }
-
-  .description{
-    font-size: 1rem;
-    line-height: 1.7;
-  }
-
-  .image-wrapper{
-    padding: 8px;
-  }
-
-  img{
-    height: 420px;
-  }
-
-    .info-overlay {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-
-    background: rgba(6, 8, 16, 0.92);
-    backdrop-filter: blur(12px);
-
-    padding: 0.9rem 1.1rem;
-
-    border: 1px solid rgba(200,169,110,0.25);
-
-    width: fit-content;
-    max-width: 240px;
-    }
-
-  .title{
-    font-size: 1.2rem;
-  }
-
-  .stats{
-    justify-content: center;
-    gap: 1.5rem;
-  }
-
-  .stat-item strong{
-    font-size: 1.8rem;
-  }
-
 }
 
 .name{

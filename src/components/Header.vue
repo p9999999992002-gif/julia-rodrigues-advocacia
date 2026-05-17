@@ -27,11 +27,18 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
 
       <a href="#contact" class="cta-btn">CONSULTA GRATUITA</a>
 
-      <button @click="menuOpen = !menuOpen" class="mobile-menu-btn">
+      <button @click="menuOpen = !menuOpen" class="mobile-menu-btn" aria-label="Abrir menu">
         <span :class="{ active: menuOpen }"></span>
         <span :class="{ active: menuOpen }"></span>
         <span :class="{ active: menuOpen }"></span>
       </button>
+    </div>
+
+    <div :class="['mobile-menu', { open: menuOpen }]">
+      <a href="#home" @click="menuOpen = false">Início</a>
+      <a href="#about" @click="menuOpen = false">Sobre</a>
+      <a href="#areas" @click="menuOpen = false">Atuação</a>
+      <a href="#contact" @click="menuOpen = false">Contato</a>
     </div>
   </header>
 </template>
@@ -130,26 +137,45 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
   color: #060810;
 }
 
-.mobile-menu-btn { display: none; }
+.mobile-menu-btn {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+}
 
 @media (max-width: 900px) {
   .nav, .cta-btn { display: none; }
+
   .mobile-menu-btn {
     display: flex;
     flex-direction: column;
     gap: 5px;
     background: none;
     border: none;
+    cursor: pointer;
   }
+
   .mobile-menu-btn span {
     width: 28px;
     height: 2.5px;
     background: white;
     transition: 0.4s;
+    display: block;
   }
-  .mobile-menu-btn .active:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-  .mobile-menu-btn .active:nth-child(2) { opacity: 0; }
-  .mobile-menu-btn .active:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
+
+  .mobile-menu-btn span.active:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .mobile-menu-btn span.active:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-menu-btn span.active:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
 
   .mobile-menu {
     position: absolute;
@@ -157,11 +183,20 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
     left: 0;
     right: 0;
     background: #060810;
-    padding: 2rem;
+    padding: 1.5rem 2rem 2rem;
     flex-direction: column;
-    gap: 1.5rem;
-    display: none;
+    gap: 1.2rem;
+    border-bottom: 1px solid rgba(200,169,110,0.12);
   }
-  .mobile-menu.open { display: flex; }
+
+  .mobile-menu.open {
+    display: flex;
+  }
+
+  .mobile-menu a {
+    color: #f5f5f5;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+  }
 }
 </style>
